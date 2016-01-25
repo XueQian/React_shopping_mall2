@@ -4,6 +4,11 @@ var CartItem = require('./cartItem.jsx');
 
 var Cart = React.createClass({
 
+    getDefaultProps: function() {
+        return {
+            items: []
+        }
+    },
     getInitialState: function() {
         return {
             items: this.props.items
