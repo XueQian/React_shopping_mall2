@@ -1,6 +1,7 @@
 var React = require('React');
 
 var CartItem = require('./cartItem.jsx');
+var Navigation = require('./navigation.jsx');
 
 var Cart = React.createClass({
 
@@ -42,6 +43,8 @@ var Cart = React.createClass({
         var items = this.state.items;
         return (
             <div>
+                <Navigation projectName="react shopping mall"/>
+
                 <h3>Cart</h3>
                 { items.length > 0 ? this.renderItems() : this.showBlankMessage() }
             </div>
