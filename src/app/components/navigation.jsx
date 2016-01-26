@@ -1,5 +1,6 @@
 var React = require('react');
 var Bootstrap = require('react-bootstrap');
+var Link = require('react-router-component').Link;
 
 var Navbar = Bootstrap.Navbar;
 var Nav = Bootstrap.Nav;
@@ -14,11 +15,11 @@ var Navigation = React.createClass({
             <Navbar className="navbar navbar-inverse navbar-fixed-top">
                 <a className="navbar-brand" href="#">{this.props.projectName}</a>
                 <Nav className="nav navbar-nav">
-                    <NavItem className="active" eventKey={1} href="#home">Home</NavItem>
-                    <NavItem eventKey={2} href="#mall">Mall</NavItem>
-                    <NavItem eventKey={2} href="#shoopingcart">Shopping Cart</NavItem>
-                    <NavItem eventKey={2} href="#checkout">Check Out</NavItem>
-                    <DropdownButton eventKey={3} title="Dropdown">
+                    <NavItem className="active"><Link href="/home">Home</Link></NavItem>
+                    <NavItem><Link href="/mall">Mall</Link></NavItem>
+                    <NavItem ><Link href="/cart">Shopping Cart</Link></NavItem>
+                    <NavItem >Check Out</NavItem>
+                    <DropdownButton title="Dropdown">
                         <MenuItem eventKey="1">Action</MenuItem>
                         <MenuItem eventKey="2">Another action</MenuItem>
                         <MenuItem eventKey="3">Something else here</MenuItem>

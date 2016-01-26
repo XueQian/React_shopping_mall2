@@ -19,7 +19,7 @@
                 <Locations hash>
                     <Location path="/home" handler={Home}/>
                     <Location path="/mall" handler={Mall}/>
-                    <Location path="/shoopingcart" handler={Cart}/>
+                    <Location path="/cart" handler={Cart}/>
                 </Locations>
             )
         }
