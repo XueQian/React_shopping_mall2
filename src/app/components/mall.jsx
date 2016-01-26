@@ -9,7 +9,9 @@ var Mall = React.createClass({
 
     getInitialState: function() {
 
-        return {data: {items: []}};
+        return {data: {items: []},
+        itemsInCart:[]
+        };
     },
     componentDidMount: function() {
 
@@ -20,17 +22,42 @@ var Mall = React.createClass({
         });
     },
 
+    updateCart: function(items) {
+        this.setState({itemsInCart: items});
+    },
+
+    addItemToCart: function(item) {
+        var items = this.state.itemsInCart;
+        var existingItem = _.find(items, function(i) {
+            return i.id == item.id;
+        });
+
+        if(existingItem) {
+            existingItem.count = existingItem.count + 1
+        } else {
+            items.push({
+                name: item.name,
+                count: 1,
+                price: item.price,
+                id: item.id
+            })
+        }
+        this.updateCart(items);
+    },
+
     render: function() {
         var items = this.state.data.items;
+        var that = this;
 
         return (
             <div>
                 <Navigation projectName="react shopping mall" />
 
                 {items.map(function(item) {
-                    return <Item data={item}/>
+                    return <Item data={item} addItemToCart={that.addItemToCart}/>
                 }) }
 
+                <Cart items = {this.state.itemsInCart}/>
             </div>
         )
     }

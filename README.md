@@ -32,10 +32,10 @@ gulp
 ```
 
 ## 下一步
-1.解决router刷新问题
-2.bootstrap代替cart页面table
-3.唯一add to cart计算
-4.用localstorage存储，实现cart到单独页面
-5.cart角标自增功能
+- [ ] 解决router刷新问题
+- [ ] bootstrap代替cart页面table
+- [x] 唯一add to cart计算
+- [ ] 用localstorage存储，实现cart到单独页面
+- [ ] cart角标自增功能
 
 
