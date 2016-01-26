@@ -11,6 +11,7 @@ var Cart = React.createClass({
         }
     },
     getInitialState: function() {
+        console.log(this.props.items);
         return {
             items: this.props.items
         }

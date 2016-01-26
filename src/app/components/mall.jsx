@@ -3,7 +3,7 @@ var Bootstrap = require('react-bootstrap');
 
 var Navigation = require('./navigation.jsx');
 var Item = require('./item.jsx');
-var Cart = require('./cart.jsx');
+var CartCount = require('./cartCount.jsx');
 
 var Mall = React.createClass({
 
@@ -57,7 +57,7 @@ var Mall = React.createClass({
                     return <Item data={item} addItemToCart={that.addItemToCart}/>
                 }) }
 
-                <Cart items = {this.state.itemsInCart}/>
+                <CartCount items = {this.state.itemsInCart}/>
             </div>
         )
     }
