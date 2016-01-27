@@ -3,18 +3,10 @@ var Bootstrap = require('react-bootstrap');
 var ModalTrigger = Bootstrap.ModalTrigger;
 
 var Navigation = require('./navigation.jsx');
-var Item = require('./item.jsx');
 var Cart = require('./cart.jsx');
 var Link = require('react-router-component').Link;
 
-var Mall = React.createClass({
-
-    getInitialState: function() {
-
-        return {
-            items: []
-        };
-    },
+var CartCount = React.createClass({
 
     caculateCount: function() {
 
@@ -30,15 +22,15 @@ var Mall = React.createClass({
             <div>
                 <Navigation projectName="react shopping mall"/>
 
-                <ModalTrigger modal={<Cart items={items} />}>
-                    <Link href="/cart">
+                <ModalTrigger modal={<Cart items={items}/>}>
+                    <a href="/#mall">
                         <span className="badge">{this.caculateCount()}</span>
                         <span>ShoppingCart</span>
-                    </Link>
+                    </a>
                 </ModalTrigger>
             </div>
         )
     }
 });
 
-module.exports = Mall;
+module.exports = CartCount;
