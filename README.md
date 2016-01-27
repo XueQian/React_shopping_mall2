@@ -36,6 +36,6 @@ gulp
 - [ ] bootstrap代替cart页面table
 - [x] 唯一add to cart计算
 - [ ] 用localstorage存储，实现cart到单独页面
-- [ ] cart角标自增功能
+- [x] cart角标自增功能
 
 
