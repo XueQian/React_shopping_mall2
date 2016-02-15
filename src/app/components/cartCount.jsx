@@ -2,7 +2,6 @@ var React = require('react');
 var Bootstrap = require('react-bootstrap');
 var ModalTrigger = Bootstrap.ModalTrigger;
 
-var Navigation = require('./navigation.jsx');
 var Cart = require('./cart.jsx');
 var Link = require('react-router-component').Link;
 
@@ -20,7 +19,6 @@ var CartCount = React.createClass({
 
         return (
             <div>
-                <Navigation projectName="react shopping mall"/>
 
                 <ModalTrigger modal={<Cart items={items}/>}>
                     <a href="/#mall">
