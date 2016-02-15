@@ -37,5 +37,5 @@ gulp
 - [x] 唯一add to cart计算
 - [ ] 用localstorage存储，实现cart到单独页面
 - [x] cart角标自增功能
-
+  
 
